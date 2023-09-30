@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[QLC-] WebInterface v.0.0.1</title>
+    <script src="js/qlcp.js"></script>
+    <script src="js/storage.js"></script>
+    <link rel="stylesheet" href="scss/main.min.css?v=sfsdf">
+</head>
+<body>
+    <div class="scenesBar">
+        <span id="nameWrapper">Nowa scena...   </span><button onclick="window.saveScene()">Zapisz scenę</button>
+        <button onclick="window.saveAs()">Zapisz jako...</button>
+        Wczytaj scenę: <select id="sceneSelect" oninput="window.changeScene()">
+            <option selected>Wybierz scenę</option>
+        </select>
+    </div>
+    <div id="slidersContainer"></div>
+    <script>window.storage.loadSceneSelect()</script>
+</body>
+</html>
